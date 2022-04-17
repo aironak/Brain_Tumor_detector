@@ -1,2 +1,2 @@
 # Brain_Tumor_detector
-CSCE Project 
+CSCE 590 Project 
