@@ -62,7 +62,7 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
     batch_size=BATCH_SIZE,
 )
 
-class_names = ['glioma', 'meningioma', 'pituitary']
+class_names = [ 'meningioma', 'glioma','pituitary']
 plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
   for i in range(9):

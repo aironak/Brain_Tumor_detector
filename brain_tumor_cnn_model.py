@@ -56,7 +56,7 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
 
 import matplotlib.pyplot as plt
         
-class_names = ['glioma', 'meningioma', 'pituitary']
+class_names = [ 'meningioma','glioma', 'pituitary']
 plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
     for i in range(9):
@@ -128,6 +128,8 @@ test_ds = test_ds.prefetch(buffer_size=32)
 # history = model.fit(
 #     train_ds, epochs=epochs, callbacks=callbacks, validation_data=val_ds,
 # )
+# 
+#
 
 from IPython.display import SVG
 from keras.utils.vis_utils import model_to_dot

@@ -56,7 +56,7 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
 
 import matplotlib.pyplot as plt
         
-class_names = ['glioma', 'meningioma', 'pituitary']
+class_names = [ 'meningioma','glioma', 'pituitary']
 plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
     for i in range(9):
@@ -90,8 +90,6 @@ val_ds = val_ds.skip(val_batches // 5)
 train_ds = augmented_train_ds.prefetch(buffer_size=32)
 val_ds = val_ds.prefetch(buffer_size=32)
 test_ds = test_ds.prefetch(buffer_size=32)
-
-IMG_SHAPE
 
 IMG_SHAPE = image_size + (3,)
 base_model = tf.keras.applications.MobileNetV2(input_shape=IMG_SHAPE,
@@ -220,3 +218,20 @@ pred_entire = np.array(pred_entire)
 labels_entire = np.array(labels_entire)
 print(pred_entire)
 print(labels_entire)
+
+# Commented out IPython magic to ensure Python compatibility.
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+# %matplotlib inline
+
+arr = confusion_matrix(labels_entire, pred_entire)
+df_cm = pd.DataFrame(arr, class_names, class_names)
+plt.figure(figsize = (9,6))
+sns.heatmap(df_cm, annot=True, fmt="d", cmap='viridis')
+plt.xlabel("Prediction")
+plt.ylabel("Target")
+plt.show()
+
+from sklearn import metrics
+fpr, tpr, thresholds = metrics.roc_curve(labels_entire, pred_entire, pos_label=2)
+metrics.auc(fpr, tpr)
