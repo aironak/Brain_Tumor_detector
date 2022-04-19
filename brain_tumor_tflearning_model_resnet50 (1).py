@@ -276,3 +276,9 @@ plt.show()
 from sklearn import metrics
 fpr, tpr, thresholds = metrics.roc_curve(labels_entire, pred_entire, pos_label=2)
 metrics.auc(fpr, tpr)
+
+from sklearn.metrics import classification_report, multilabel_confusion_matrix
+print(classification_report(labels_entire, pred_entire, target_names=class_names))
+
+from sklearn.metrics import precision_score, accuracy_score, recall_score, f1_score
+print(f"Accuracy: {round(accuracy_score(labels_entire, pred_entire), 2)}")
