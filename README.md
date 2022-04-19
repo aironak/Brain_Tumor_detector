@@ -11,3 +11,5 @@ Brain_Tumor_TFLearning_MobileNetV2_model.ipynb:  This is the notebook where we i
 Brain_Tumor_CNN_model.ipynb: This is the notebook where we implement the simple CNN model without using Transfer Learning.{preliminary results}
 
 You would typically run the data preparation notebook first after downloading the required data in Dataset folder.(Link for that is given in the folder).
+
+Do not forget to set the path of respective folders if you wish to rename the folders locally.
