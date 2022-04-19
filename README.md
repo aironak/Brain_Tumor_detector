@@ -9,3 +9,5 @@ Predictor.ipynb : This is the notebook where we use the above model and test it'
 Brain_Tumor_TFLearning_MobileNetV2_model.ipynb:  This is the notebook where we implement the model with base as MobileNetV2 and evaluate the model.
 
 Brain_Tumor_CNN_model.ipynb: This is the notebook where we implement the simple CNN model without using Transfer Learning.{preliminary results}
+
+You would typically run the data preparation notebook first after downloading the required data in Dataset folder.(Link for that is given in the folder).
