@@ -1,5 +1,6 @@
 # Brain_Tumor_detector
 CSCE 590 Project 
+To implement multi-class classification of the brain tumour in following types: Meningioma, Glioma & Pituitary
 
 Brain_Tumor_TFLearning_model_resnet50.ipynb : This is the notebook where we implement the model with base as resnet50 and evaluate the model. 
 
